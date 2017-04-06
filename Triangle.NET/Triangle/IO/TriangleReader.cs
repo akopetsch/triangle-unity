@@ -35,7 +35,7 @@ namespace TriangleNet.IO
 
             string line = reader.ReadLine().Trim();
 
-            while (String.IsNullOrWhiteSpace(line) || line.StartsWith("#"))
+            while (line == null || line.Trim().Equals("") || line.StartsWith("#"))
             {
                 if (reader.EndOfStream)
                 {
